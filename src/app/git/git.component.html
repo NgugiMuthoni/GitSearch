@@ -1,0 +1,25 @@
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+<h1>GITHUB<img src="https://bit.ly/36cBAK2" style="width: 50px; height: 50px;">SEARCH </h1>
+<form action="" class="enter">
+  <div class="form-group">
+    <input type="text" placeholder="enter username here...." class="form-control"  [(ngModel)]="username" name="username" (keyup)="findProfile()">
+
+  </div>
+</form>
+<div *ngIf="profile">
+  <img class="img"  style="width: 100px; height: 100px;" src="{{profile.avatar_url}}">
+  <br>
+  <br>
+  <p>
+    <span class="label" class="btn btn-success"> {{profile.followers}} Followers</span>&nbsp;
+
+    <span class="label" class="btn btn-info"> {{profile.following}} Following </span>&nbsp;
+
+    <span class="label" class="btn btn-primary"> {{profile.public_repos}} Repositories</span>
+  </p>
+
+  <p>
+    <a href="{{profile.html_url}}" target="_blank" class=" view  btn btn-warning">Explore profile on github</a>
+
+  </p>
+</div>
