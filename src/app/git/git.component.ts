@@ -14,12 +14,12 @@ export class GitComponent implements OnInit {
   constructor(private gitService: GitService) {
     this.gitService.updateUser(this.username);
     this.gitService.gitProfile().subscribe(profile => {
-      console.log(profile);
+      // console.log(profile);
       this.profile = profile;
     });
 
     this.gitService.gitRepos().subscribe(repos => {
-      console.log(repos);
+      // console.log(repos);
       this.repos = repos;
     });
   }
@@ -27,15 +27,16 @@ export class GitComponent implements OnInit {
   findProfile() {
     this.gitService.updateUser(this.username);
     this.gitService.gitProfile().subscribe(profile => {
-      console.log(profile);
+      // console.log(profile);
       this.profile = profile;
     });
 
     this.gitService.gitRepos().subscribe(repos => {
-      console.log(repos);
+      // console.log(repos);
       this.repos = repos;
     });
   }
+
   ngOnInit() {
 
     this.gitService.updateUser('NgugiMuthoni');

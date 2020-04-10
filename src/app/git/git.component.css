@@ -1,0 +1,12 @@
+.card{
+  margin: 1px;
+}
+/*.text-center{*/
+/*  margin-left: 10%;*/
+/*}*/
+.bg-transparent{
+  border: orangered 2px solid;
+}
+.w-75{
+  margin-left: 8%;
+}
