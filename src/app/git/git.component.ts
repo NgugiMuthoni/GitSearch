@@ -14,8 +14,8 @@ export class GitComponent implements OnInit {
   constructor(private gitService: GitService) {
     this.gitService.updateUser(this.username);
     this.gitService.gitProfile().subscribe(profile => {
-      // console.log(profile);
-      this.profile = profile;
+       console.log(profile);
+       this.profile = profile;
     });
 
     this.gitService.gitRepos().subscribe(repos => {
