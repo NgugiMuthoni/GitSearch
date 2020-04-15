@@ -6,11 +6,15 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitComponent } from './git/git.component';
+import { ReposComponent } from './repos/repos.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    GitComponent
+    GitComponent,
+    ReposComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
