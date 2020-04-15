@@ -1,64 +1,35 @@
-<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
-<div class=" container text-center">
-  <h1>GITHUB<img src="https://bit.ly/36cBAK2" style="width: 50px; height: 50px;">SEARCH </h1>
-  <form action="" class="enter">
-    <div class="form-group">
-      <input type="text" placeholder="enter username here...." class="form-control w-75"  [(ngModel)]="username" name="username" (keyup)="findProfile()">
+<div class="container" style="margin-top: 10%">
+  <figure class="card bg-transparent">
+    <div class="text-center">
+      <div class="card-header">
+        <h1><span class="text-light">GITH</span>UB<img src="https://bit.ly/36cBAK2" style="width: 50px; height: 50px;">SEA<span class="text-light">RCH</span> </h1>
+      </div>
 
-    </div>
-  </form>
-
-  <div *ngIf="profile" class="col-md-12">
-    <div class="row">
-      <figure class="col-md-4">
-        <img class="img"  style="width: 100px; height: 100px;" src="{{profile.avatar_url}}">
-      </figure>
-      <figure class="col-md-8">
-        <p class="row">
-          <span class="label" class="btn btn-success"> {{profile.followers}} Followers</span>&nbsp;
-
-          <span class="label" class="btn btn-info"> {{profile.following}} Following </span>&nbsp;
-
-          <span class="label" class="btn btn-secondary"> {{profile.public_gists}} gists</span>&nbsp;
-
-          <span class="label" class="btn btn-primary"> {{profile.public_repos}} Repositories</span>
-
-          <span class="label"> <a href="{{profile.html_url}}" target="_blank" class=" view btn btn-warning">Explore profile on github</a></span>
-        </p>
-      </figure>
-    </div>
-    <h1 class="text-monospace text-uppercase text-success">Repositories.</h1>
-    <section class="text-center d-inline-flex">
-          <figure >
-            <div class=" row ">
-              <div class="card col-md-3 bg-dark text-light " *ngFor="let repos of repos">
-                <div class="card-body card-text">
-                  <div class=" modal-header text-monospace text-bold">
-                     {{repos.name}}
-                  </div>
-
-                  <div>
-                    <p id="dec">
-                      {{repos.description}}
-                    </p>
-                  </div>
-
-                  <div class="card-footer">
-                    <a href="{{repos.html_url}}" class="text-align-center" target="_blank"
-                       class="view btn btn-outline-success">View this project on github</a>
-
-                  </div>
-
-                </div>
-              </div>
-            </div>
+      <div *ngIf="profile" class="card-body card-text col-md-12">
+        <div class="row">
+          <figure class="col-md-4 card-image image-fluid">
+            <img class="img"  style="width: 100px; height: 100px;" src="{{profile.avatar_url}}">
           </figure>
+          <figure class="col-md-8">
+            <p class="row">
+              <span class="label" class="btn btn-success"> {{profile.followers}} Followers</span>&nbsp;
+
+              <span class="label" class="btn btn-info"> {{profile.following}} Following </span>&nbsp;
+
+              <span class="label" class="btn btn-secondary"> {{profile.public_gists}} gists</span>&nbsp;
+
+              <span class="label" class="btn btn-primary"> {{profile.public_repos}} Repositories</span>
+
+              <span class="label"> <a href="{{profile.html_url}}" target="_blank" class=" view btn btn-warning">Explore profile on github</a></span>
+            </p>
+          </figure>
+        </div>
 
 
-    </section>
 
+      </div>
 
-
-  </div>
+    </div>
+  </figure>
 
 </div>
